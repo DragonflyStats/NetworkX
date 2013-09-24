@@ -1,0 +1,17 @@
+# - prop.test
+#        prop.test can be used for testing the null that the proportions (probabilities of success) in several groups are the same, or that they equal certain given values.
+# - Kolmogorov-Smirnov test      [ks.test()]
+#	       Performs one or two sample Kolmogorov-Smirnov tests. 
+# - Anderson Darling test        [ad.test()]
+# - Grubbs test for outliers     [Grubbs.test()]
+# - Dixon test for outliers
+# - correlation test 		[cor.test()]
+# - Analysis of variance.	[anova()]
+
+#################################################
+
+# Formal hypothesis teest for Pearson Correlation
+
+X <- rnorm(10)
+Y <- rnorm(10)
+cor.text(X,Y)
