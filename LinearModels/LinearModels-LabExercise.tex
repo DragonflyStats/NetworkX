@@ -20,27 +20,29 @@ Absorbance(Y)
 0.625
 0.763
 
+\begin{framed}
+\begin{verbatim}
 Conc=c( 0, 5, 10, 15, 20, 25, 30)
 Abso=c( 0.003, 0.127, 0.251, 0.390, 0.498, 0.625, 0.763)
-
-
+\end{verbatim}
+\end{framed}
 Determine the slope and the intercept of the calibration plot and their confidence limits.
 
 We determine the slope and intercept of the calibration plot using the linear regression model function lm().
 
-
+\begin{framed}
+\begin{verbatim}
 FitA = lm(Abso~Conc)
 summary(FitA)
 confint(FitA)
-
+\end{verbatim}
+\end{framed}
 
 Using ANOVA to test the goodness-of-fit of the linear relationship.
 
 We can also test for significance the slope of the simple linear model by means of ANOVA. The null hypothesis for the analysis of variance is H0 : ß1 = 0 and the alternative hypothesis is H1 : ß1 ? 0
 
 The ANOVA table for regression line is obtained by calculating the variation due to regression (SSR) and the variation around the regression line(SSE).
-
-
 
 The fitted  values are the values of y predicted using the regression equation.
 
@@ -50,11 +52,11 @@ preds = predict(FitA)
 
 resids =  resid(FitA)
 
-
-
+%-----------------------------------------------------------------------------------%
 The total sum of squares TSS
 
-
+\begin{framed}
+\begin{verbatim}
 Abso
 
 length(Abso)
@@ -67,12 +69,13 @@ Abso-mean(Abso)
 
 TSS = sum((Abso-mean(Abso))^2)
 TSS
-
-
-
+\end{verbatim}
+\end{framed}
+%---------------------------------------------------------------------------------%
 The sum of squares due to regression SSR
 
-
+\begin{framed}
+\begin{verbatim}
 preds
 
 (preds-mean(Abso))^2
@@ -80,7 +83,8 @@ preds
 SSR = sum((preds-mean(Abso))^2)
 SSR
 
-
+\end{verbatim}
+\end{framed}
 
 The sum of squares around regression SSE
 
@@ -96,7 +100,8 @@ The mean sum of squares are :
 Where the sample size is ‘n’.
 
 We can compute the Mean Square Values and the Test Statistic.
-
+\begin{framed}
+\begin{verbatim}
 MSE = SSE/(length(Abso)-2)
 MSR = SSR/1
 MSE
@@ -104,7 +109,8 @@ MSR
 
 Fts = MSR/MSE
 Fts
-
+\end{verbatim}
+\end{framed}
 
 
 
