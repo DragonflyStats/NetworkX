@@ -1,0 +1,43 @@
+When we have only two samples we can use the t-test to compare the means of the samples but it might become unreliable in case of more than two samples. If we only compare two means, then the t-test (independent samples) will give the same results as the ANOVA.
+
+It is used to compare the means of more than two samples. This can be understood better with the help of an example.
+
+### ONE WAY ANOVA
+
+EXAMPLE: Suppose we want to test the effect of five different exercises. For this, we recruit 20 men and assign one type of exercise to 4 men (5 groups). Their weights are recorded after a few weeks.
+We may find out whether the effect of these exercises on them is significantly different or not and this may be done by comparing the weights of the 5 groups of 4 men each.
+The example above is a case of one-way balanced ANOVA.
+
+It has been termed as one-way as there is only one category whose effect has been studied and balanced as the same number of men has been assigned on each exercise. Thus the basic idea is to test whether the samples are all alike or not.
+
+### WHY NOT MULTIPLE T-TESTS?
+
+As mentioned above, the t-test can only be used to test differences between two means. When there are more than two means, it is possible to compare each mean with each other mean using many t-tests.
+
+But conducting such multiple t-tests can lead to severe complications and in such circumstances we use ANOVA. Thus, this technique is used whenever an alternative procedure is needed for testing hypotheses concerning means when there are several populations.
+
+ONE WAY AND TWO WAY ANOVA
+
+Now some questions may arise as to what are the means we are talking about and why variances are analyzed in order to derive conclusions about means. The whole procedure can be made clear with the help of an experiment.
+
+Let us study the effect of fertilizers on yield of wheat. We apply five fertilizers, each of different quality, on five plots of land each of wheat. The yield from each plot of land is recorded and the difference in yield among the plots is observed. Here, fertilizer is a factor and the different qualities of fertilizers are called levels.
+This is a case of one-way or one-factor ANOVA since there is only one factor, fertilizer. We may also be interested to study the effect of fertility of the plots of land. In such a case we would have two factors, fertilizer and fertility. This would be a case of two-way or two-factor ANOVA. Similarly, a third factor may be incorporated to have a case of three-way or three-factor ANOVA.
+
+### CHANCE CAUSE AND ASSIGNABLE CAUSE
+
+In the above experiment the yields obtained from the plots may be different and we may be tempted to conclude that the differences exist due to the differences in quality of the fertilizers.
+
+But this difference may also be the result of certain other factors which are attributed to chance and which are beyond human control. This factor is termed as “error”. Thus, the differences or variations that exist within a plot of land may be attributed to error.
+
+Thus, estimates of the amount of variation due to assignable causes (or variance between the samples) as well as due to chance causes (or variance within the samples) are obtained separately and compared using an F-test and conclusions are drawn using the value of F.
+
+### ASSUMPTIONS
+
+There are four basic assumptions used in ANOVA.
+
+the expected values of the errors are zero
+the variances of all errors are equal to each other
+the errors are independent
+they are normally distributed
+ 
+
