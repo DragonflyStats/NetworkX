@@ -1,0 +1,9 @@
+Prediction Intervals 
+ 
+In contrast to a confidence interval, which is concerned with estimating a population parameter, a 
+prediction interval is concerned with estimating an individual value and is therefore a type of 
+probability interval. (Another type of interval we will see later in the course is a Tolerance Interval ) 
+ 
+The complete standard error for a prediction interval is called the standard error of forecast, and it 
+includes the uncertainty associated with the vertical “scatter” about the regression line plus the 
+uncertainty associated with the position of the regression line value itself. 
