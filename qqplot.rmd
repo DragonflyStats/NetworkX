@@ -1,0 +1,30 @@
+Graphical Methods for Testing Normality
+======================================================
+The quantile-quantile (QQ) plot is an excellent way to see whether the data deviate from 
+normal (the plot can be set up to see if the data deviate from other distributions as well 
+but here we are only interested in the normal distribution). 
+
+The process R goes through for creating a QQ plot involves determining what proportion 
+of the 'observed' scores fall below any one score, then the z score that would fit that proportion if 
+the data were normally distributed is calculated, and finally that z score that would cut off 
+that proportion (the 'expected normal value') is translated back into the original metric to 
+see what raw score that would be. 
+
+A scatter plot is then created that shows the relationship between the actual 'observed' values 
+and what those values would be 'expected' to be if the data were normally distributed. 
+
+This is all quite complicated but the 'bottom line' is quite easy, if the data are normally 
+distributed then the circles on the resulting plot (each circle representing a score) will 
+form a straight line. 
+
+Use the following examples to learn how to interpret QQ plots, be aware that some stat 
+programs switch the axes around from the way it is set up in R.
+
+help(qqnorm)
+
+```{r}
+x <-c(6,2,8,1,9,14,15,16,34,24,26,21,16,17,14,5)
+
+qqnorm(x)
+qqline(x)
+````
