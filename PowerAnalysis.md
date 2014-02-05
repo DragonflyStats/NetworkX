@@ -5,10 +5,10 @@ Power analysis is an important aspect of experimental design. It allows us to de
 
 The following four quantities have an intimate relationship:
 
-*sample size
-*effect size
-*significance level = P(Type I error) = probability of finding an effect that is not there
-*power = 1 - P(Type II error) = probability of finding an effect that is there
+* sample size
+* effect size
+* significance level = P(Type I error) = probability of finding an effect that is not there
+* power = 1 - P(Type II error) = probability of finding an effect that is there
 
 Given any three, we can determine the fourth.
 
@@ -27,18 +27,22 @@ Some of the more important functions are listed below.
 * `pwr.t2n.test`	t-test (two samples with unequal n)
 
 For each of these functions, you enter three of the four quantities (effect size, sample size, significance level, power) and the fourth is calculated.
-The significance level defaults to 0.05. Therefore, to calculate the significance level, given an effect size, sample size, and power, use the option "sig.level=NULL".
+The significance level defaults to 0.05. Therefore, to calculate the significance level, given an effect size, sample size, and power, use the option `"sig.level=NULL"`.
+
 Specifying an effect size can be a daunting task. ES formulas and Cohen's suggestions (based on social science research) are provided below. Cohen's suggestions should only be seen as very rough guidelines. Your own subject matter experience should be brought to bear.
 
 ### t-tests
 For t-tests, use the following functions:
-pwr.t.test(n = , d = , sig.level = , power = , type = c("two.sample", "one.sample", "paired"))
-where n is the sample size, d is the effect size, and type indicates a two-sample t-test, one-sample t-test or paired t-test. If you have unequal sample sizes, use
-pwr.t2n.test(n1 = , n2= , d = , sig.level =, power = )
+`pwr.t.test(n = , d = , sig.level = , power = , type = c("two.sample", "one.sample", "paired"))`
+where n is the sample size, d is the effect size, and type indicates a two-sample t-test, one-sample t-test or paired t-test. 
+
+If you have unequal sample sizes, use
+`pwr.t2n.test(n1 = , n2= , d = , sig.level =, power = )`
 where n1 and n2 are the sample sizes.
+
 For t-tests, the effect size is assessed as Cohen d
 Cohen suggests that d values of 0.2, 0.5, and 0.8 represent small, medium, and large effect sizes respectively.
-You can specify alternative="two.sided", "less", or "greater" to indicate a two-tailed, or one-tailed test. A two tailed test is the default.
+You can specify ``alternative="two.sided", "less"`, or `"greater"` to indicate a two-tailed, or one-tailed test. A two tailed test is the default.
 
 ### ANOVA
 For a one-way analysis of variance use
@@ -49,8 +53,11 @@ For a one-way ANOVA effect size is measured by f where
 Cohen f
 Cohen suggests that f values of 0.1, 0.25, and 0.4 represent small, medium, and large effect sizes respectively.
 Correlations
+
 For correlation coefficients use
-`pwr.r.test(n = , r = , sig.level = , power = )` where n is the sample size and r is the correlation. We use the population correlation coefficient as the effect size measure. Cohen suggests that r values of 0.1, 0.3, and 0.5 represent small, medium, and large effect sizes respectively.
+`pwr.r.test(n = , r = , sig.level = , power = )` where n is the sample size and r is the correlation. We use the population correlation coefficient as the effect size measure. 
+
+Cohen suggests that r values of 0.1, 0.3, and 0.5 represent small, medium, and large effect sizes respectively.
 
 ### Linear Models
 For linear models (e.g., multiple regression) use
@@ -60,7 +67,8 @@ where u and v are the numerator and denominator degrees of freedom. We use f2 as
 #### cohen f2
 Cohen f2 alternate
 The first formula is appropriate when we are evaluating the impact of a set of predictors on an outcome. The second formula is appropriate when we are evaluating the impact of one set of predictors above and beyond a second set of predictors (or covariates). Cohen suggests f2 values of 0.02, 0.15, and 0.35 represent small, medium, and large effect sizes.
-Tests of Proportions
+
+### Tests of Proportions
 When comparing two proportions use
 `pwr.2p.test(h = , n = , sig.level =, power = )`where h is the effect size and n is the common sample size in each group.
 
