@@ -11,7 +11,7 @@ from normality, the 'Kolomogorov-Smirnov' family of tests and the 'Shapiro-Wilk'
 For the purposes of this module, we will only use a special case of the 'Kolomogorov-Smirnov' test, known as the ‘ Anderson-Darling' test of 
 normality. 
 
-The ‘Anderson-Darling’ test can not be implemented directly in R. Using the test requires the installation of the nortest package. We will look at 
+The **Anderson-Darling** test can not be implemented directly in R. Using the test requires the installation of the nortest package. We will look at 
 packages in greater detail later in the semester. 
  
 The null hypothesis of both the `Anderson-Darling’ and `Shapiro-Wilk’ tests is that the population is normally distributed, and the alternative 
