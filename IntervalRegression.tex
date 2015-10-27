@@ -1,0 +1,10 @@
+Version info: Code for this page was tested in Stata 12.
+
+Interval regression is used to model outcomes that have interval censoring.  In other words, you know the ordered category into which each observation falls, but you do not know the exact value of the observation.  Interval regression is a generalization of censored regression.
+Please note: The purpose of this page is to show how to use various data analysis commands.  It does not cover all aspects of the research process which researchers are expected to do.  In particular, it does not cover data cleaning and checking, verification of assumptions, model diagnostics or potential follow-up analyses.
+
+Examples of interval regression
+
+Example 1.  We wish to model annual income using years of education and marital status.  However, we do not have access to the precise values for income.  Rather, we only have data on the income ranges: <$15,000, $15,000-$25,000, $25,000-$50,000, $50,000-$75,000, $75,000-$100,000, and >$100,000.  Note that the extreme values of the categories on either end of the range are either left-censored or right-censored.  The other categories are interval censored, that is, each interval is both left- and right-censored.  Analyses of this type require a generalization of censored regression known as interval regression.
+
+Example 2.  We wish to predict GPA from teacher ratings of effort and from reading and writing test scores.  The measure of GPA is a self-report response to the following item:
